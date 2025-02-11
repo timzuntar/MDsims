@@ -12,4 +12,12 @@ The production simulation was only left to run for 500 ps, as the purpose of the
 
 -----
 
-For the second part, the steps from the tutorial up to and including the equilibration were redone in a larger, much more elongated unit cell 7.5 x 7.5 x 50 nm in size. (description and results pending)
+For the second part, the steps from the tutorial up to and including the equilibration were redone in a larger, much more elongated unit cell 7.5 x 7.5 x 50 nm in size. This one had to be populated with 90 000 water molecules! You can barely make out the protein:
+
+<img src="stretching/1AKI_longbox.png" width="500" title="PyMOL visualization of the enlarged box">
+
+I have chosen residues 1 and 129 at the ends of the backbone as pull groups. Since they were oriented almost exactly along the long axis of the solvation box, no reorientation was performed, but the distance pulling geometry may still impose some torque on the lysozyme.
+
+Running the entire pulling code until the chain is entirely stretched out is going to take a while. In the meantime, the results of the first 0.5 ns seem promising - while it may be too early for quantitative evaluation, qualitatively they seem to make sense. The distance between the pull groups is increasing slightly slower than if the chain offered zero resistance, which is visible in the simultaneous increase of force, and sudden increases in distance correspond well to drops in the pulling force.
+
+<img src="stretching/1AKI_f_x.png" width="400">
