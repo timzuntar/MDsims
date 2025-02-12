@@ -2,9 +2,17 @@
 
 ### Purpose
 
-This repository is a space for the results of any forays of yours truly into the world of molecular dynamics tools. Currently, the test simulations are limited to GROMACS [[1]](#1) and based on the suite of tutorials of J. A. Lemkul [[1]](#1).
+This repository is a space for the results of any forays of yours truly into the world of molecular dynamics tools. Currently, the test simulations are limited to GROMACS [[1]](#1) and based on the suite of tutorials of J. A. Lemkul [[2]](#2).
 
 Unless otherwise indicated, PyMOL [[3]](#3) was used for the visualization of molecular structures; all other plots were created with Matplotlib [[4]](#4).
+
+### Results
+
+The results of simulations are included and presented in their respective subfolders' readme files.
+
+- Simulation and stretching of lysozyme protein [Link](https://github.com/timzuntar/MDsims/tree/main/GMX_1_lysozyme#readme)
+
+- Calculation of interaction energy between a lysozyme and 2-propylphenol [Link](https://github.com/timzuntar/MDsims/tree/main/GMX_5_ligand_complex#readme)
 
 ### References
 <a id="1">[1]</a>
