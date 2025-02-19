@@ -18,6 +18,8 @@ For the second part, the steps from the tutorial up to and including the equilib
 
 I have chosen residues 1 and 129 at the ends of the backbone as pull groups. Since they were oriented almost exactly along the long axis of the solvation box, no reorientation was performed, but the distance pulling geometry may still impose some torque on the lysozyme.
 
-Running the entire pulling code until the chain is entirely stretched out is going to take a while. In the meantime, the results of the first 0.5 ns seem promising - while it may be too early for quantitative evaluation, qualitatively they seem to make sense. The distance between the pull groups is increasing slightly slower than if the chain offered zero resistance, which is visible in the simultaneous increase of force, and sudden increases in distance correspond well to drops in the pulling force.
+Running the entire pulling code until the chain is entirely stretched out is going to take a while. In the meantime, the results of the first nanosecond seemed promising - while it may be too early for quantitative evaluation, qualitatively it made sense. The distance between the pull groups was increasing slightly slower than if the chain offered zero resistance, which is visible in the simultaneous increase of force, and sudden increases in distance corresponded to drops in the pulling force. After this initial regime, something strange happens - the protein seems to stiffen up and stop unfolding, while the pulling force grows to several thousands of kJ/mol/nm.
 
-<img src="stretching/1AKI_f_x.png" width="400">
+<img src="stretching/1AKI_f_x.png" width="400"><img src="stretching/1AKI_conformation_change_4ns.png" width="400" title="PyMOL visualization of the stretched lysozyme at 0 ns (green) and 4 ns (cyan).">
+
+It is possible that the MD run was started with a misparametrized set of values. If the bonds do not rupture within a couple of nanoseconds more, I am going to admit failure on this project.
