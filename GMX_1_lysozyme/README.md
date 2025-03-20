@@ -20,6 +20,10 @@ I have chosen residues 1 and 129 at the ends of the backbone as pull groups. Sin
 
 Running the entire pulling code until the chain is entirely stretched out is going to take a while. In the meantime, the results of the first nanosecond seemed promising - while it may be too early for quantitative evaluation, qualitatively it made sense. The distance between the pull groups was increasing slightly slower than if the chain offered zero resistance, which is visible in the simultaneous increase of force, and sudden increases in distance corresponded to drops in the pulling force. After this initial regime, something strange happens - the protein seems to stiffen up and stop unfolding, while the pulling force grows to several thousands of kJ/mol/nm.
 
-<img src="stretching/1AKI_f_x.png" width="400"><img src="stretching/1AKI_conformation_change_4ns.png" width="400" title="PyMOL visualization of the stretched lysozyme at 0 ns (green) and 4 ns (cyan).">
+<img src="stretching/1AKI_f_x.png" width="400"><img src="stretching/1AKI_conformation_change_6ns.png" width="400" title="PyMOL visualization of the stretched lysozyme at 0 ns (cyan) and 6 ns (green).">
 
-It is possible that the MD run was started with a misparametrized set of values. If the bonds do not rupture within a couple of nanoseconds more, I am going to admit failure on this project.
+*Right-hand image: lysozyme backbone conformation at 0 ns is colored cyan, the conformation at 6 ns is colored green.*
+
+If we simultaneously visualize the start and end conformations, while accounting for rotation, the issue seems to be happening at the junction of three (at the start) short α-helices, visible in the bottom of the image, which stay in close proximity even though one of them uncoiled during the simulation.
+
+It is possible that the MD run was started with a misparametrized set of values. Since the bonds between the α-helices did not rupture at a pulling force of over 8000 kJ/mol/nm, which is several times higher than any sourced value I was able to find, the misparametrization is my working hypothesis and the simulation has been discarded as a failure.
